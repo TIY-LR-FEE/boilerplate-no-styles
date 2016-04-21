@@ -51,6 +51,7 @@ gulp.task('build', ['clean', 'browserify', 'sass', 'index', 'assets']);
 
 gulp.task('watch', function () {
 	gulp.watch('app/*.html', ['index']);
+  gulp.watch('app/assets/**/*', ['assets'])
 	gulp.watch(['app/styles/**/*.scss', 'app/styles/**/*.css'], ['sass']);
 	gulp.watch(['app/**/*.js'], ['browserify']);
 });
